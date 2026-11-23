@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#050713">
+
+    <title>COSMOS - Explore The Universe</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+    </script>
+</head>
+
+<body>
+
+    <div id="space-bg"></div>
+
+    <header class="navbar">
+        <div class="logo">COSMOS<span>.</span></div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#solar">Solar System</a>
+            <a href="#discover">Discover</a>
+            <a href="#missions">Missions</a>
+        </nav>
+
+        <a href="#solar" class="nav-button">Explore ↗</a>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+                <p class="eyebrow">AN INTERACTIVE JOURNEY THROUGH SPACE</p>
+
+                <h1>
+                    THE UNIVERSE<br>
+                    <span>IS YOURS.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Lihat lebih dekat dunia yang jauh.
+                    Jelajahi planet, bintang, dan misteri kosmos
+                    melalui pengalaman digital interaktif.
+                </p>
+
+                <a href="#solar" class="primary-button">
+                    START EXPLORING ↗
+                </a>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-orbit"></div>
+                <div class="hero-planet"></div>
+                <div class="hero-moon"></div>
+            </div>
+
+        </section>
+
+        <!-- SOLAR SYSTEM -->
+        <section class="solar-section" id="solar">
+
+            <div class="section-heading">
+                <p class="eyebrow">01 / OUR COSMIC NEIGHBORHOOD</p>
+                <h2>Meet the <span>planets.</span></h2>
+                <p>
+                    Jelajahi delapan planet yang mengorbit Matahari.
+                    Pilih planet untuk melihat informasi dan bentuknya dalam 3D.
+                </p>
+            </div>
+
+            <div class="solar-container">
+
+                <div class="planet-view">
+                    <div id="planetCanvas"></div>
+
+                    <div class="planet-controls">
+                        <button id="rotateToggle">Ⅱ</button>
+                        <button id="resetView">⟲</button>
+                        <span>DRAG TO ROTATE · SCROLL TO ZOOM</span>
+                    </div>
+                </div>
+
+                <div class="planet-information">
+
+                    <p class="eyebrow">PLANET PROFILE</p>
+
+                    <h2 id="infoName">Earth</h2>
+
+                    <p id="planetDescription">
+                        Our home in the cosmos.
+                    </p>
+
+                    <div class="planet-stats">
+                        <div>
+                            <small>DIAMETER</small>
+                            <strong id="diameter">12,742 km</strong>
+                        </div>
+
+                        <div>
+                            <small>DAY LENGTH</small>
+                            <strong id="dayLength">23.9 hours</strong>
+                        </div>
+
+                        <div>
+                            <small>ORBITAL PERIOD</small>
+                            <strong id="yearLength">365.25 days</strong>
+                        </div>
+
+                        <div>
+                            <small>AVG. DISTANCE</small>
+                            <strong id="distance">149.6 million km</strong>
+                        </div>
+                    </div>
+
+                    <div class="planet-fact">
+                        <span>✦</span>
+                        <p id="planetFact">
+                            Earth is the only known planet to support life.
+                        </p>
+                    </div>
+
+                    <div class="planet-navigation">
+                        <button id="prevPlanet">←</button>
+                        <span>EXPLORE PLANET</span>
+                        <button id="nextPlanet">→</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="planetSelector" class="planet-selector"></div>
+
+        </section>
+
+        <!-- DISCOVER -->
+        <section class="discover-section" id="discover">
+
+            <div class="section-heading">
+                <p class="eyebrow">02 / BEYOND THE PLANETS</p>
+                <h2>Into the <span>unknown.</span></h2>
+            </div>
+
+            <div class="discover-grid">
+
+                <article class="discover-card">
+                    <div class="nebula-art"></div>
+                    <h3>Nebula</h3>
+                    <p>Awan gas dan debu tempat banyak bintang terbentuk.</p>
+                </article>
+
+                <article class="discover-card">
+                    <div class="blackhole-art"></div>
+                    <h3>Black Hole</h3>
+                    <p>Objek kosmik dengan gravitasi yang sangat kuat.</p>
+                </article>
+
+                <article class="discover-card">
+                    <div class="galaxy-art"></div>
+                    <h3>Milky Way</h3>
+                    <p>Galaksi tempat Tata Surya kita berada.</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- MISSIONS -->
+        <section class="missions-section" id="missions">
+
+            <p class="eyebrow">03 / HUMAN CURIOSITY</p>
+
+            <h2>We were born<br>to <span>explore.</span></h2>
+
+            <div class="mission-list">
+                <div>
+                    <strong>1969</strong>
+                    <h3>Apollo 11</h3>
+                    <p>Pendaratan manusia pertama di Bulan.</p>
+                </div>
+
+                <div>
+                    <strong>1977</strong>
+                    <h3>Voyager</h3>
+                    <p>Eksplorasi planet luar dan ruang antarbintang.</p>
+                </div>
+
+                <div>
+                    <strong>2021</strong>
+                    <h3>James Webb</h3>
+                    <p>Teleskop untuk mengamati alam semesta.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- RANDOM FACT -->
+        <section class="fact-section">
+
+            <p class="eyebrow">COSMIC KNOWLEDGE</p>
+
+            <h2>Did you know?</h2>
+
+            <p id="randomFact">
+                Cahaya Matahari membutuhkan sekitar 8 menit
+                20 detik untuk mencapai Bumi.
+            </p>
+
+            <button id="randomFactBtn">
+                DISCOVER MORE ↻
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <h2>COSMOS<span>.</span></h2>
+        <p>Explore the universe beyond imagination.</p>
+        <small>© 2026 COSMOS EXPLORATION</small>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
